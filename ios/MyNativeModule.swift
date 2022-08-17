@@ -6,7 +6,6 @@ class MyNativeModule: NSObject {
   @objc
   func toggleTorch(_ isActive: Bool, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
     let avCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-    print("native", isActive)
   
     if avCaptureDevice!.hasTorch {
       if isActive {
