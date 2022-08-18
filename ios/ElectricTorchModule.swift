@@ -1,10 +1,10 @@
 import Foundation
 import AVFoundation
 
-@objc(MyNativeModule)
-class MyNativeModule: NSObject {
+@objc(ElectricTorchModule)
+class ElectricTorchModule: NSObject {
   @objc
-  func toggleTorch(_ isActive: Bool, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
+  func toggle(_ isActive: Bool) {
     let avCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video)
   
     if avCaptureDevice!.hasTorch {

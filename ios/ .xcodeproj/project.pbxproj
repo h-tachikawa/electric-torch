@@ -11,8 +11,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		16C50C5828ACFDBB0069B55D /* MyNativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C50C5728ACFDBB0069B55D /* MyNativeModule.swift */; };
-		16C50C5A28ACFE870069B55D /* MyNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C50C5928ACFE870069B55D /* MyNativeModule.m */; };
+		16C50C5828ACFDBB0069B55D /* ElectricTorchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C50C5728ACFDBB0069B55D /* ElectricTorchModule.swift */; };
+		16C50C5A28ACFE870069B55D /* ElectricTorchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C50C5928ACFE870069B55D /* ElectricTorchModule.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C52C87BF489D4EB6A824C9EE /* libPods-MyFirstRNNativeModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FD62FE1D2912D84FC2AE6F /* libPods-MyFirstRNNativeModule.a */; };
 		E8BBB7331501641AB7283A20 /* libPods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9C5DCD96D7ECD3F80158E9 /* libPods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests.a */; };
@@ -40,8 +40,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyFirstRNNativeModule/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyFirstRNNativeModule/main.m; sourceTree = "<group>"; };
 		16C50C5628ACFDBB0069B55D /* MyFirstRNNativeModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstRNNativeModule-Bridging-Header.h"; sourceTree = "<group>"; };
-		16C50C5728ACFDBB0069B55D /* MyNativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNativeModule.swift; sourceTree = "<group>"; };
-		16C50C5928ACFE870069B55D /* MyNativeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNativeModule.m; sourceTree = "<group>"; };
+		16C50C5728ACFDBB0069B55D /* ElectricTorchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricTorchModule.swift; sourceTree = "<group>"; };
+		16C50C5928ACFE870069B55D /* ElectricTorchModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElectricTorchModule.m; sourceTree = "<group>"; };
 		19A6D6A1796E10CFA869B307 /* Pods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests.debug.xcconfig"; path = "Target Support Files/Pods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests/Pods-MyFirstRNNativeModule-MyFirstRNNativeModuleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F205AA6CCC47764D4C63F47 /* Pods-MyFirstRNNativeModule.debug copy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstRNNativeModule.debug copy.xcconfig"; path = "Target Support Files/Pods-MyFirstRNNativeModule/Pods-MyFirstRNNativeModule.debug copy.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyFirstRNNativeModule/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				16C50C5928ACFE870069B55D /* MyNativeModule.m */,
-				16C50C5728ACFDBB0069B55D /* MyNativeModule.swift */,
+				16C50C5928ACFE870069B55D /* ElectricTorchModule.m */,
+				16C50C5728ACFDBB0069B55D /* ElectricTorchModule.swift */,
 				13B07FAE1A68108700A75B9A /* MyFirstRNNativeModule */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MyFirstRNNativeModuleTests */,
@@ -424,9 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C50C5828ACFDBB0069B55D /* MyNativeModule.swift in Sources */,
+				16C50C5828ACFDBB0069B55D /* ElectricTorchModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				16C50C5A28ACFE870069B55D /* MyNativeModule.m in Sources */,
+				16C50C5A28ACFE870069B55D /* ElectricTorchModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

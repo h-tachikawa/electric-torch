@@ -4,8 +4,8 @@ import {View, Text, SafeAreaView, NativeModules, Button} from 'react-native';
 export const Page = () => {
   const [isActive, setIsActive] = useState(true);
 
-  const increment = () => {
-    NativeModules.MyNativeModule.toggleTorch(isActive);
+  const toggle = () => {
+    NativeModules.ElectricTorchModule.toggle(isActive);
     setIsActive(prev => !prev);
   };
 
@@ -13,7 +13,7 @@ export const Page = () => {
     <SafeAreaView>
       <View>
         <Text>懐中電灯アプリ(仮)</Text>
-        <Button title="TOGGLE" onPress={increment} />
+        <Button title="TOGGLE" onPress={toggle} />
       </View>
     </SafeAreaView>
   );
