@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, SafeAreaView, NativeModules, Button} from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  NativeModules,
+  StyleSheet,
+  Text,
+} from 'react-native';
+import {Header, Button} from '@rneui/themed';
 
 export const Page = () => {
   const [isActive, setIsActive] = useState(true);
@@ -8,13 +15,47 @@ export const Page = () => {
     NativeModules.ElectricTorchModule.toggle(isActive);
     setIsActive(prev => !prev);
   };
+  const currentState = isActive ? 'ON' : 'OFF';
 
   return (
     <SafeAreaView>
-      <View>
-        <Text>懐中電灯アプリ(仮)</Text>
-        <Button title="TOGGLE" onPress={toggle} />
+      <Header
+        containerStyle={styles.container}
+        leftComponent={{icon: 'menu', color: '#FFF'}}
+        centerComponent={{text: '懐中電灯アプリ', style: styles.heading}}
+      />
+      <View style={{alignItems: 'center'}}>
+        <Text>現在の状態: {currentState}</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'center',
+            marginTop: 20,
+          }}>
+          <Button
+            color="secondary"
+            title="PUSH"
+            onPress={toggle}
+            containerStyle={{width: 150}}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#397af8',
+    marginBottom: 20,
+    width: '100%',
+    paddingVertical: 10,
+  },
+  heading: {
+    color: 'white',
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+});

@@ -27,7 +27,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { Page } from './src/Page'
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+
+import {Page} from './src/Page';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -61,9 +63,11 @@ const Section: React.FC<
 
 const App = () => {
   return (
+    <SafeAreaProvider>
       <Page />
-  )
-}
+    </SafeAreaProvider>
+  );
+};
 
 // const App = () => {
 //   const isDarkMode = useColorScheme() === 'dark';
