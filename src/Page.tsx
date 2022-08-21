@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  SafeAreaView,
-  NativeModules,
-  StyleSheet,
-  Text,
-} from 'react-native';
-import {Header, Button} from '@rneui/themed';
+import {View, SafeAreaView, NativeModules, StyleSheet} from 'react-native';
+import {Header, Button, Slider, Icon, lightColors} from '@rneui/themed';
 
 export const Page = () => {
   const [isActive, setIsActive] = useState(true);
@@ -15,14 +9,13 @@ export const Page = () => {
     NativeModules.ElectricTorchModule.toggle(isActive);
     setIsActive(prev => !prev);
   };
-  const currentState = isActive ? 'ON' : 'OFF';
 
   return (
     <SafeAreaView>
       <Header
         containerStyle={styles.container}
         leftComponent={{icon: 'menu', color: '#FFF'}}
-        centerComponent={{text: '懐中電灯アプリ', style: styles.heading}}
+        centerComponent={{text: '懐中電灯アプリ(仮)', style: styles.heading}}
       />
       <View style={{alignItems: 'center'}}>
         <Text>現在の状態: {currentState}</Text>
